@@ -2,12 +2,24 @@ let contador = 0;
 let input = document.getElementById("inputTarefa");
 let btnAdd = document.getElementById("btn-add");
 let main = document.getElementById("areaLista");
+let limite = document.getElementById("limite"); // Corrigido
 
 // Adiciona uma nova tarefa
 function addTarefa() {
   let valorInput = input.value.trim();
   
-  if (valorInput !== "" && valorInput.length < 18) {
+  if (valorInput.length > 17) {
+    limite.innerText = "O limite de caracteres é 17!";
+    limite.style.color = "red";
+    setTimeout(() => {
+      limite.innerHTML = "";
+    }, 2000)
+    return;
+  } else {
+    limite.innerText = ""; // Remove a mensagem se estiver dentro do limite
+  }
+
+  if (valorInput !== "") {
     contador++;
     let novaTarefa = {
       id: contador,
@@ -33,7 +45,7 @@ function renderTarefas() {
   listaTarefas.forEach((tarefa) => {
     let novoItem = `<div id="${tarefa.id}" class="item ${tarefa.concluida ? 'clicado' : ''}">
       <div onclick="marcarTarefa(${tarefa.id})" class="item-icone">
-        <i id="icone_${tarefa.id}" class="mdi ${tarefa.concluida ? 'mdi-check-circle' : 'mdi-circle-outline'}" class="oo" ></i>
+        <i id="icone_${tarefa.id}" class="mdi ${tarefa.concluida ? 'mdi-check-circle' : 'mdi-circle-outline'}"></i>
       </div>
       <div onclick="marcarTarefa(${tarefa.id})" class="item-nome">
         ${tarefa.nome}
@@ -81,4 +93,4 @@ input.addEventListener("keyup", function(event) {
 });
 
 // Carrega as tarefas ao abrir o site
-document.addEventListener("DOMContentLoaded", renderTarefas); 
+document.addEventListener("DOMContentLoaded", renderTarefas);
