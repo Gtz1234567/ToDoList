@@ -90,6 +90,7 @@ main {
   /* border: 1px solid deeppink; */
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 
 .item-botao {
@@ -100,7 +101,7 @@ main {
 
 .delete {
   background: black;
-  color: #ff85;
+  color: green;
   border: none;
   padding: 10px;
   height: 80px;
