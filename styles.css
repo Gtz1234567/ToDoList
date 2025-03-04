@@ -62,7 +62,7 @@ main {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: #eeeeee;
   height: 80px;
   width: 100%;
   box-shadow: 0 0 20px #00FFC4;
@@ -99,7 +99,7 @@ main {
 }
 
 .delete {
-  background: white;
+  background: #eeeeee;
   color: white;
   border: none;
   padding: 10px;
