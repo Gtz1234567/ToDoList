@@ -24,22 +24,24 @@ h1 {
 }
 
 input {
-  height: 110px;
-  font-size: 2rem;
+  height: 70px;
+  font-size: 1.5rem;
   width: 80%;
   padding-left: 10%;
+  border-radius: 2px;
 }
 
 button.add {
   width: 20%;
   cursor: pointer;
-  background: green;
+  background: #00FFC4;
   color: white;
   font-weight: bold;
   border: none;
-  height: 110px;
+  height: 70px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  
   
 }
 
@@ -67,9 +69,7 @@ main {
   cursor: pointer;
 }
 
-.item.clicado {
-  background: #d4f6d9;
-}
+
 
 .item.clicado .item-nome {
   text-decoration: line-through;
@@ -81,6 +81,7 @@ main {
  /* border: 1px solid orangered; */
   text-align: center;
   font-size: 2rem;
+  color: #00FFC4;
 }
 
 .item-nome {
@@ -97,14 +98,25 @@ main {
 }
 
 .delete {
-  background: red;
+  background: white;
   color: white;
   border: none;
   padding: 10px;
   height: 80px;
   width: 100%;
+  
 }
 
 .mdi-check-circle {
-  color: green;
+  color: #00ffc4;
+}
+
+h1 {
+  color: #00FFC4;
+
+}
+
+.mdi-delete {
+  font-size: 40px;
+  color: gray;
 }

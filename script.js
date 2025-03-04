@@ -33,14 +33,14 @@ function renderTarefas() {
   listaTarefas.forEach((tarefa) => {
     let novoItem = `<div id="${tarefa.id}" class="item ${tarefa.concluida ? 'clicado' : ''}">
       <div onclick="marcarTarefa(${tarefa.id})" class="item-icone">
-        <i id="icone_${tarefa.id}" class="mdi ${tarefa.concluida ? 'mdi-check-circle' : 'mdi-circle-outline'}"></i>
+        <i id="icone_${tarefa.id}" class="mdi ${tarefa.concluida ? 'mdi-check-circle' : 'mdi-circle-outline'}" class="oo" ></i>
       </div>
       <div onclick="marcarTarefa(${tarefa.id})" class="item-nome">
         ${tarefa.nome}
       </div>
       <div class="item-botao">
         <button onclick="deletar(${tarefa.id})" class="delete">
-          <i class="mdi mdi-delete"></i> Deletar
+          <i class="mdi mdi-delete"></i>
         </button>
       </div>
     </div>`;
@@ -81,4 +81,4 @@ input.addEventListener("keyup", function(event) {
 });
 
 // Carrega as tarefas ao abrir o site
-document.addEventListener("DOMContentLoaded", renderTarefas);
+document.addEventListener("DOMContentLoaded", renderTarefas); 
