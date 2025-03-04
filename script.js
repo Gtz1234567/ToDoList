@@ -7,7 +7,7 @@ let main = document.getElementById("areaLista");
 function addTarefa() {
   let valorInput = input.value.trim();
   
-  if (valorInput !== "") {
+  if (valorInput !== "" && valorInput.length < 18) {
     contador++;
     let novaTarefa = {
       id: contador,

@@ -62,7 +62,7 @@ main {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  background: #eeeeee;
+  background: black;
   height: 80px;
   width: 100%;
   box-shadow: 0 0 20px #00FFC4;
@@ -99,8 +99,8 @@ main {
 }
 
 .delete {
-  background: #eeeeee;
-  color: white;
+  background: black;
+  color: #ff85;
   border: none;
   padding: 10px;
   height: 80px;
@@ -119,5 +119,5 @@ h1 {
 
 .mdi-delete {
   font-size: 40px;
-  color: gray;
+  color: white;
 }
