@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Termos e Política</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f9f9f9; color: #333; }
+    h1, h2 { color: #222; }
+    nav { margin-bottom: 20px; }
+    nav button { margin-right: 10px; padding: 10px 20px; background: #0077cc;
+    color: white; border: none; cursor: pointer; border-radius: 5px; gap: 30px;}
+    nav button:hover { background: #005fa3; }
+    .content { display: none; cursor: pointer; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background: white; }
+    .content.active { display: block; }
+  </style>
+</head>
+<body>
+
+  <h1>Bem-vindo!</h1>
+  <nav>
+    <button onclick="showContent('terms')">Termos de Serviço</button>
+    <button onclick="showContent('privacy')">Política de Privacidade</button>
+  </nav>
+
+  <div id="terms" class="content active" onclick="showContent('terms')">
+    <h2>Termos de Serviço</h2>
+      <p>Ao utilizar o Night Bot, você concorda com os seguintes termos:</p>
+  <ul>
+    <li><b>Uso Aceitável:</b> Você se compromete a não utilizar o bot para atividades ilegais ou que violem os Termos de Serviço do Discord.</li>
+    <li><b>Limitação de Responsabilidade:</b> O desenvolvedor não se responsabiliza por quaisquer danos ou perdas decorrentes do uso do bot.</li>
+    <li><b>Modificações:</b> O desenvolvedor reserva-se o direito de modificar ou descontinuar o bot a qualquer momento, sem aviso prévio.</li>
+    <li><b>Propriedade Intelectual:</b> O código e funcionalidades do bot são propriedade do desenvolvedor e não podem ser reproduzidos sem autorização.</li>
+    <li><b>Encerramento de Uso:</b> O uso do bot pode ser encerrado a qualquer momento, por qualquer motivo, sem aviso prévio.</li>
+  </ul>
+  </div>
+
+  <div id="privacy" class="content" onclick="showContent('privacy')">
+    <h2>Política de Privacidade</h2>
+    <p>Esta Política de Privacidade descreve como coletamos, usamos e protegemos suas informações ao utilizar nossos serviços.</p>
+
+  <h2>1. Coleta de Informações</h2>
+  <p>Coletamos informações que você nos fornece voluntariamente, como nome de usuário e endereço de e-mail. Não coletamos informações sensíveis sem seu consentimento.</p>
+
+  <h2>2. Uso das Informações</h2>
+  <p>Utilizamos suas informações apenas para fornecer, operar e melhorar nossos serviços. Não vendemos ou compartilhamos seus dados com terceiros sem sua autorização.</p>
+
+  <h2>3. Armazenamento e Segurança</h2>
+  <p>Adotamos medidas adequadas para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição.</p>
+
+  <h2>4. Cookies</h2>
+  <p>Podemos utilizar cookies para melhorar sua experiência, armazenando preferências e informações de sessão.</p>
+
+  <h2>5. Direitos dos Usuários</h2>
+  <p>Você tem o direito de acessar, corrigir ou excluir suas informações pessoais. Para isso, entre em contato conosco.</p>
+
+  <h2>6. Alterações nesta Política</h2>
+  <p>Podemos atualizar esta Política de Privacidade periodicamente. Recomendamos que você revise esta página regularmente.</p>
+  </div>
+
+  <script>
+    function showContent(id) {
+      document.querySelectorAll('.content').forEach(div => div.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
